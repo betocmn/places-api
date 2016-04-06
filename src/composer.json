@@ -1,0 +1,15 @@
+{
+    "description": "Places API",
+    "version": "1.0.0",
+    "require": {
+        "redound/phalcon-rest": "^1.1.8",
+        "league/fractal": "^0.13.0",
+        "firebase/php-jwt": "^3.0"
+    },
+    "authors": [
+        {
+            "name": "Humberto Moreira",
+            "email": "humberto.mn@gmail.com"
+        }
+    ]
+}
