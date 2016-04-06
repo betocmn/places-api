@@ -1,4 +1,4 @@
-infra
+infra/places-production.pem
 src/app/config/local.php
 cache/volt/*.php
 .DS_Store*

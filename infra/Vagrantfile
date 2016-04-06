@@ -1,0 +1,18 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  # Virtual Machine Box (CentOS 6.6 64)
+  config.vm.box = "puppetlabs/centos-6.6-64-puppet"
+
+  config.vm.synced_folder "../", "/places",
+    owner: "vagrant", group: "places-dev"
+
+  config.vm.network "forwarded_port", guest: 80, host: 8085
+  config.vm.network "forwarded_port", guest: 81, host: 8185
+  config.vm.network "forwarded_port", guest: 443, host: 4445
+
+end
