@@ -29,11 +29,10 @@ $ curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/b
 $ composer update
 ```
 
-Create the database and initialize the schema:
+Create the database:
 
 ```sh
 $ psql 'CREATE DATABASE places WITH OWNER = postgres ENCODING = 'UTF8';'
-$ psql places < src/schema/initial.sql
 ```
 
 ## API Methods
