@@ -1,4 +1,5 @@
 infra/places-production.pem
+infra/.vagrant
 src/app/config/local.php
 cache/volt/*.php
 .DS_Store*
