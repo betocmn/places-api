@@ -2,6 +2,8 @@
 
 The Places API is a [Phalcon PHP][1] web service providing search capabilities for places around the world
 
+Demo: http://api-places.us-west-2.elasticbeanstalk.com/
+
 ## Get Started
 
 ### Requirements
@@ -55,6 +57,62 @@ Response Example:
 {
     "token": "fdsajlk32j4kldfklashfklhasdf",
     "expires": "234234234234",
+}
+```
+
+### Find Nearby Places by Type
+Searches for nearby places by type
+
+URL: /places/search?type={type}&location={location}&token={your-authentication-token}
+
+Method: GET
+
+Response Example:
+```
+{
+    "place": {
+        "name": "Manly Cafe",
+        "address": "33 Herald St, Manly 2018",
+        ...
+    },
+    "place": {
+        "name": "Manly Pizza",
+        "address": "11 Herald St, Manly 2018",
+        ...
+    },
+
+}
+```
+
+### Get Recommendations
+Searches for nearby places accordingly to the preferences of each person of a group
+
+URL: /places/recommendations?token={your-authentication-token}
+
+Method: POST
+
+Request Example:
+```
+{
+
+    ...
+}
+```
+
+Response Example:
+```
+{
+    "place": {
+        "name": "Manly Cafe",
+        "address": "33 Herald St, Manly 2018",
+        ...
+    },
+    "place": {
+        "name": "Manly Pizza",
+        "address": "11 Herald St, Manly 2018",
+        ...
+    },
+
 }
 ```
 

@@ -4,7 +4,9 @@
     "require": {
         "redound/phalcon-rest": "^1.1.8",
         "league/fractal": "^0.13.0",
-        "firebase/php-jwt": "^3.0"
+        "firebase/php-jwt": "^3.0",
+        "phpunit/phpunit": "~4.5",
+        "phalcon/incubator": "dev-master"
     },
     "authors": [
         {

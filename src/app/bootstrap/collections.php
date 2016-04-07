@@ -7,3 +7,4 @@
 
 $app->mount(new \PhalconRest\Collection\ResourceCollection);
 $app->mount(new AuthCollection);
+$app->mount(new PlaceCollection);

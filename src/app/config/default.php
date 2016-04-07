@@ -19,7 +19,8 @@ return [
             '/users/authenticate'
         ],
         'privateEndpoints' => [
-            '/places/search/{location}/{type}',
+            '/places/search/',
+            '/places/recommendations/',
         ],
     ],
 
