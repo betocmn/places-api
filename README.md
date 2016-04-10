@@ -2,7 +2,7 @@
 
 The Places API is a [Phalcon PHP][1] web service providing search capabilities for places around the world
 
-Demo: http://api-places.us-west-2.elasticbeanstalk.com/
+Demo: http://api-places.us-west-2.elasticbeanstalk.com/ (username: demo / password: T783YuahwmO98Uy11kl3GHj)
 
 ## Get Started
 
