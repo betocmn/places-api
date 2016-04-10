@@ -40,23 +40,7 @@ class PlaceController extends \App\Mvc\Controller
         if($search_results){
             foreach($search_results as $result){
                 $place = new Place();
-                $place->factual_id = $result['factual_id'];
-                $place->name = $result['name'];
-                $place->address = $result['address'];
-                $place->address_extended = $result['address_extended'];
-                $place->locality = $result['locality'];
-                $place->region = $result['region'];
-                $place->postcode = $result['postcode'];
-                $place->country = $result['country'];
-                $place->tel = $result['tel'];
-                $place->website = $result['website'];
-                $place->latitude = $result['latitude'];
-                $place->longitude = $result['longitude'];
-                $place->hours = $result['hours'];
-                $place->category_labels = $result['category_labels'];
-                $place->category_ids = $result['category_ids'];
-                $place->email = $result['email'];
-                $place->po_box = $result['po_box'];
+                $place->setFactualValues($result);
                 $places[] = $place;
             }
         }
@@ -101,23 +85,7 @@ class PlaceController extends \App\Mvc\Controller
         if($search_results){
             foreach($search_results as $result){
                 $place = new Place();
-                $place->factual_id = $result['factual_id'];
-                $place->name = $result['name'];
-                $place->address = $result['address'];
-                $place->address_extended = $result['address_extended'];
-                $place->locality = $result['locality'];
-                $place->region = $result['region'];
-                $place->postcode = $result['postcode'];
-                $place->country = $result['country'];
-                $place->tel = $result['tel'];
-                $place->website = $result['website'];
-                $place->latitude = $result['latitude'];
-                $place->longitude = $result['longitude'];
-                $place->hours = $result['hours'];
-                $place->category_labels = $result['category_labels'];
-                $place->category_ids = $result['category_ids'];
-                $place->email = $result['email'];
-                $place->po_box = $result['po_box'];
+                $place->setFactualValues($result);
                 $places[] = $place;
             }
         }
