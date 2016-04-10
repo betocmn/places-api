@@ -54,8 +54,10 @@ Headers{
 Response Example:
 ```
 {
-    "token": "fdsajlk32j4kldfklashfklhasdf",
-    "expires": "234234234234",
+  "data": {
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VybmFtZSIsInN1YiI6IjEiLCJpYXQiOjE0NjAzMjkyMzQsImV4cCI6MjkyMTI2MzI2OH0.LevTDdUf8qzyVRpccdZn1dhmbrUsBbTTG-S9nIVchwk",
+    "expires": 1460934034
+  }
 }
 ```
 
@@ -86,7 +88,7 @@ Response Example:
 ### Get Recommendations
 Searches for nearby places accordingly to the preferences of each person of a group
 
-URL: /places/recommendations?token={your-authentication-token}
+URL: /places/recommendations?location={location}&token={your-authentication-token}
 
 Method: POST
 
