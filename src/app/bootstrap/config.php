@@ -5,6 +5,7 @@
  * @author: Humberto Moreira <humberto.mn@gmail.com>
  */
 
+$application_env = isset($application_env) ? $application_env : 'development';
 switch ($application_env) {
 
     case 'production':

@@ -42,12 +42,12 @@ Authenticates client app via HTTP Auth. You need username:password.
 
 URL: /users/authenticate
 
-Method: GET
+Method: POST
 
 Request Example:
 ```
 Headers{
-    "Authorization": "'Basic sd9u19221934y='"
+    "Authorization": "'Basic ZGVtbzpUNzgzWXVhaHdtTzk4VXkxMWtsM0dIag=='"
 }
 ```
 
@@ -92,10 +92,43 @@ Method: POST
 
 Request Example:
 ```
-{
-
-    ...
-}
+[
+  {
+    "name": "Bob",
+    "title": "executive",
+    "likes": [
+      "indian",
+      "chinese",
+      "malaysian"
+    ],
+    "dislikes": [
+      "Australian"
+    ],
+    "requirements": "gluten free"
+  },
+  {
+    "name": "Jose",
+    "title": "developer",
+    "likes": [
+      "indian",
+      "chinese"
+    ],
+    "dislikes": [
+      "thai"
+    ]
+  },
+  {
+    "name": "Aloysia",
+    "title": "evangelist",
+    "likes": [
+      "chinese"
+    ],
+    "dislikes": [
+      "Australian"
+    ],
+    "requirements": "gluten free"
+  }
+]
 ```
 
 Response Example:

@@ -6,7 +6,11 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Zend\\Diactoros\\' => array($vendorDir . '/zendframework/zend-diactoros/src'),
+    'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
+    'Phalcon\\' => array($vendorDir . '/phalcon/incubator/Library/Phalcon'),
     'PhalconRest\\' => array($vendorDir . '/redound/phalcon-rest/src/PhalconRest'),
     'League\\Fractal\\' => array($vendorDir . '/league/fractal/src'),
+    'Ivory\\HttpAdapter\\' => array($vendorDir . '/egeloen/http-adapter/src'),
     'Firebase\\JWT\\' => array($vendorDir . '/firebase/php-jwt/src'),
 );

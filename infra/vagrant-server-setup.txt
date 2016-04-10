@@ -62,19 +62,20 @@ sudo ./install
 sudo vi /etc/php.d/phalcon.ini
 # Add “extension=phalcon.so”
 sudo vi /etc/php-fpm.d/www.conf
+# Change “listen” to “listen = /var/run/php-fpm/php-fpm.sock”
 # Next, find the lines that set the listen.owner and listen.group and uncomment them. They should look like this:
 # “listen.owner = nobody”
 # “listen.group = nobody”
-# “listen.mode = 0660”
+# “listen.mode = 0666”
 # Lastly, find the lines that set the user and group and change their values from "apache" to "nginx"
 
 # Installs Phalcon Developer Tools
 sudo su
-cd /tmp
+cd /root
 git clone git://github.com/phalcon/phalcon-devtools.git
 cd phalcon-devtools
 . ./phalcon.sh
-ln -s ~/phalcon-devtools/phalcon.php /usr/bin/phalcon
+ln -s /root/phalcon-devtools/phalcon.php /usr/bin/phalcon
 chmod ugo+x /usr/bin/phalcon
 
 # Installs Composer

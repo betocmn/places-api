@@ -6,4 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Geocoder' => array($vendorDir . '/willdurand/geocoder/src'),
+    'Factual' => array($vendorDir . '/factual/factual-php-driver'),
 );

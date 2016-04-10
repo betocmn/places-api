@@ -11,13 +11,15 @@ class AuthController extends \App\Mvc\Controller
      * @title("Authenticate")
      * @description("Authenticate user")
      * @headers({
-     *      "Authorization": "'Basic sd9u19221934y='"
+     *      "Authorization": "Basic sd9u19221934y="
      * })
      * @requestExample("POST /users/authenticate")
      * @response("Data object or Error object")
      */
     public function authenticate()
     {
+
+
         $username = $this->request->getUsername();
         $password = $this->request->getPassword();
 
@@ -29,4 +31,5 @@ class AuthController extends \App\Mvc\Controller
 
         return $this->respondArray($response, 'data');
     }
+
 }

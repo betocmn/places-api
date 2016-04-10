@@ -20,25 +20,6 @@ $di->setShared(AppServices::CONFIG, function () use ($config) {
 /**
  * @description Phalcon - \Phalcon\Db\Adapter\Pdo\Postgresql
  */
-$di->set('fraud_db', function () use ($config, $di) {
-
-    $dbClass = 'Phalcon\Db\Adapter\Pdo\\' . $config->databases->fraud->adapter;
-    $connection = new $dbClass(array(
-        "host" => $config->databases->fraud->host,
-        "username" => $config->databases->fraud->username,
-        "password" => $config->databases->fraud->password,
-        "dbname" => $config->databases->fraud->name
-    ));
-
-    //Assign the eventsManager to the db adapter instance
-    $connection->setEventsManager($di->get(AppServices::EVENTS_MANAGER));
-
-    return $connection;
-});
-
-/**
- * @description Phalcon - \Phalcon\Db\Adapter\Pdo\Mysql
- */
 $di->set(AppServices::DB, function () use ($config, $di) {
 
     $dbClass = 'Phalcon\Db\Adapter\Pdo\\' . $config->database->adapter;
@@ -46,7 +27,7 @@ $di->set(AppServices::DB, function () use ($config, $di) {
         "host" => $config->database->host,
         "username" => $config->database->username,
         "password" => $config->database->password,
-        "dbname" => $config->database->name
+        "dbname" => $config->database->dbname
     ));
 
     //Assign the eventsManager to the db adapter instance
@@ -180,6 +161,14 @@ $di->setShared(AppServices::URL_QUERY_PARSER, function () {
 $di->setShared(AppServices::USER_SERVICE, function () {
 
     return new \App\Services\UserService;
+});
+
+/**
+ * @description App - \Library\App\Services\PlaceService
+ */
+$di->setShared(AppServices::PLACE_SERVICE, function () {
+
+    return new \App\Services\PlaceService;
 });
 
 return $di;

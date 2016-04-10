@@ -11,7 +11,7 @@ class PlaceCollection extends \Phalcon\Mvc\Micro\Collection
         $this->setHandler('PlaceController', true);
         $this->setPrefix('/places');
 
-        $this->post('/search', 'search');
+        $this->get('/search', 'search');
         $this->post('/recommendations', 'recommendations');
     }
 }

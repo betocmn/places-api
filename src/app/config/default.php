@@ -19,9 +19,22 @@ return [
             '/users/authenticate'
         ],
         'privateEndpoints' => [
-            '/places/search/',
-            '/places/recommendations/',
+            '/places/search',
+            '/places/recommendations',
         ],
     ],
+
+    'factualApi' => [
+        'key' => 'zmGmtW8FhQDwPttG4HoC0BGq7yaiKm6ahDo4VlQT',
+        'secret' => 'xpjwra54yZgax2LKtDab7f2JUwyhDZJk89ZaZBOO',
+        'categories' => '312,338'
+    ],
+
+    'googleGeocodeApi' => [
+        'key' => 'AIzaSyCx4RMUQ79q7diWUzhstJXLQbNf6oliwGg',
+        'locale' => null,
+        'region' => null,
+        'ssl' => false
+    ]
 
 ];

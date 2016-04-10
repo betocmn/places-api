@@ -10,7 +10,7 @@ class PlaceController extends \App\Mvc\Controller
 {
     /**
      * @title("Search")
-     * @description("Find places by name and type")
+     * @description("Find 5 closest places by name and type")
      * @response("Place objects or Error object")
      * @requestExample("GET /places/search?location=Woolloomooloo&type=coffee")
      * @responseExample({
@@ -24,42 +24,44 @@ class PlaceController extends \App\Mvc\Controller
      */
     public function search()
     {
-        // Searches for latitude and longitude details using GOOGLE GEOCODE API
-        // TODO
 
-        // Searches for places on the FACTUAL API
-        // TODO Change below to get specific categories and proximity GET settings
-        $factual = new Factual("get-key-from-config","get-secret-from-config");
-        $query = new FactualQuery;
-        $query->search("Sushi Bondi");
-        $res = $factual->fetch("places", $query);
-        $factual_results = $res->getData();
+        // Receives requested params
+        $search_type = preg_replace('#[^A-Za-z0-9-./]#', '', $_GET['type']);
+        $search_location = preg_replace('#[^A-Za-z0-9-./]#', '', $_GET['location']);
 
-        // Loads results into the Place Model
-        $places = array();
-        if(sizeof($factual_results)){
-            $place = new Place();
-            $place->factual_id = $factual_results['factual_id'];
-            $place->name = $factual_results['name'];
-            $place->address = $factual_results['address'];
-            $place->address_extended = $factual_results['address_extended'];
-            $place->locality = $factual_results['locality'];
-            $place->region = $factual_results['region'];
-            $place->postcode = $factual_results['postcode'];
-            $place->country = $factual_results['country'];
-            $place->tel = $factual_results['tel'];
-            $place->website = $factual_results['website'];
-            $place->latitude = $factual_results['latitude'];
-            $place->longitude = $factual_results['longitude'];
-            $place->hours = $factual_results['hours'];
-            $place->category_labels = $factual_results['category_labels'];
-            $place->category_ids = $factual_results['category_ids'];
-            $place->email = $factual_results['email'];
-            $place->po_box = $factual_results['po_box'];
-            $places[] = $place;
+        // Performs the search
+        $search_results = false;
+        if($search_type && $search_location){
+            $search_results = $this->placeService->search($search_location, $search_type);
         }
 
-        // Produces results
+        // Loads results into place objects
+        $places = array();
+        if($search_results){
+            foreach($search_results as $result){
+                $place = new Place();
+                $place->factual_id = $result['factual_id'];
+                $place->name = $result['name'];
+                $place->address = $result['address'];
+                $place->address_extended = $result['address_extended'];
+                $place->locality = $result['locality'];
+                $place->region = $result['region'];
+                $place->postcode = $result['postcode'];
+                $place->country = $result['country'];
+                $place->tel = $result['tel'];
+                $place->website = $result['website'];
+                $place->latitude = $result['latitude'];
+                $place->longitude = $result['longitude'];
+                $place->hours = $result['hours'];
+                $place->category_labels = $result['category_labels'];
+                $place->category_ids = $result['category_ids'];
+                $place->email = $result['email'];
+                $place->po_box = $result['po_box'];
+                $places[] = $place;
+            }
+        }
+
+        // Returns results to the api client
         return $this->respondCollection($places, new PlaceTransformer(), 'places');
     }
 
@@ -79,15 +81,49 @@ class PlaceController extends \App\Mvc\Controller
      */
     public function recommendations()
     {
-        // TODO
 
-        // 1- Define a points system from 0 to 5
+        // Gets posted data with the group preferences
+        $raw_post_json = file_get_contents("php://input");
+        $group_preferences = json_decode($raw_post_json, true);
 
-        // 2- Map likes and dislikes to the points definition
+        // Receives location
+        $search_location = preg_replace('#[^A-Za-z0-9-./]#', '', $_GET['location']);
 
-        // 3- Add requirements to the query ("glutten free")
+        // Performs the search
+        $search_results = false;
+        if($group_preferences && $search_location){
+            $options = array('meal_lunch' => true, 'radius' => 5000);
+            $search_results = $this->placeService->recommend($search_location, $group_preferences, $options);
+        }
 
-        // 4- Search for places with the best score (max points)
+        // Loads results into place objects
+        $places = array();
+        if($search_results){
+            foreach($search_results as $result){
+                $place = new Place();
+                $place->factual_id = $result['factual_id'];
+                $place->name = $result['name'];
+                $place->address = $result['address'];
+                $place->address_extended = $result['address_extended'];
+                $place->locality = $result['locality'];
+                $place->region = $result['region'];
+                $place->postcode = $result['postcode'];
+                $place->country = $result['country'];
+                $place->tel = $result['tel'];
+                $place->website = $result['website'];
+                $place->latitude = $result['latitude'];
+                $place->longitude = $result['longitude'];
+                $place->hours = $result['hours'];
+                $place->category_labels = $result['category_labels'];
+                $place->category_ids = $result['category_ids'];
+                $place->email = $result['email'];
+                $place->po_box = $result['po_box'];
+                $places[] = $place;
+            }
+        }
+
+        // Returns results to the api client
+        return $this->respondCollection($places, new PlaceTransformer(), 'places');
 
     }
 

@@ -7,6 +7,7 @@ class Services extends \PhalconRest\Constants\Services
     const CONFIG = 'config';
     const VIEW = 'view';
 
+    const PLACE_SERVICE = 'placeService';
     const USER_SERVICE = 'userService';
     const API_SERVICE = 'apiService';
     const QUERY = 'query';

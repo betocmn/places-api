@@ -1,49 +1,5 @@
 [
     {
-        "name": "redound/phalcon-rest",
-        "version": "1.1.8",
-        "version_normalized": "1.1.8.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/redound/phalcon-rest.git",
-            "reference": "8f8717310b2cfd9dc3062cfbac213e51ead1e0ca"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/redound/phalcon-rest/zipball/8f8717310b2cfd9dc3062cfbac213e51ead1e0ca",
-            "reference": "8f8717310b2cfd9dc3062cfbac213e51ead1e0ca",
-            "shasum": ""
-        },
-        "require": {
-            "ext-phalcon": ">=1.3.2",
-            "php": ">=5.4"
-        },
-        "suggest": {
-            "firebase/php-jwt": "^3.0",
-            "league/fractal": "^0.13.0"
-        },
-        "time": "2015-12-16 09:31:01",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "PhalconRest\\": "src/PhalconRest"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "authors": [
-            {
-                "name": "Olivier Andriessen",
-                "email": "olivierandriessen@gmail.com"
-            },
-            {
-                "name": "Bart Blok",
-                "email": "bart@wittig.nl"
-            }
-        ],
-        "description": "Phalcon REST Library"
-    },
-    {
         "name": "league/fractal",
         "version": "0.13.0",
         "version_normalized": "0.13.0.0",
@@ -152,5 +108,502 @@
         ],
         "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
         "homepage": "https://github.com/firebase/php-jwt"
+    },
+    {
+        "name": "swiftmailer/swiftmailer",
+        "version": "v5.4.1",
+        "version_normalized": "5.4.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/swiftmailer/swiftmailer.git",
+            "reference": "0697e6aa65c83edf97bb0f23d8763f94e3f11421"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/0697e6aa65c83edf97bb0f23d8763f94e3f11421",
+            "reference": "0697e6aa65c83edf97bb0f23d8763f94e3f11421",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3"
+        },
+        "require-dev": {
+            "mockery/mockery": "~0.9.1,<0.9.4"
+        },
+        "time": "2015-06-06 14:19:39",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "5.4-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "lib/swift_required.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Chris Corbyn"
+            },
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            }
+        ],
+        "description": "Swiftmailer, free feature-rich PHP mailer",
+        "homepage": "http://swiftmailer.org",
+        "keywords": [
+            "email",
+            "mail",
+            "mailer"
+        ]
+    },
+    {
+        "name": "phalcon/incubator",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/phalcon/incubator.git",
+            "reference": "1fbe3750e2710f6dffb936b04e22e2d4f885b76d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/phalcon/incubator/zipball/1fbe3750e2710f6dffb936b04e22e2d4f885b76d",
+            "reference": "1fbe3750e2710f6dffb936b04e22e2d4f885b76d",
+            "shasum": ""
+        },
+        "require": {
+            "ext-phalcon": ">=2.0.4",
+            "php": ">=5.4",
+            "swiftmailer/swiftmailer": "~5.2"
+        },
+        "require-dev": {
+            "codeception/aerospike-module": "^0.1",
+            "codeception/codeception": "^2.1",
+            "codeception/mockery-module": "^0.2",
+            "squizlabs/php_codesniffer": "^2.5"
+        },
+        "suggest": {
+            "duncan3dc/fork-helper": "To use extended class to access the beanstalk queue service",
+            "ext-aerospike": "*"
+        },
+        "time": "2016-02-05 19:41:35",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Phalcon\\": "Library/Phalcon/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Phalcon Team",
+                "email": "team@phalconphp.com"
+            }
+        ],
+        "description": "Adapters, prototypes or functionality that can be potentially incorporated to the C-framework.",
+        "homepage": "http://phalconphp.com",
+        "keywords": [
+            "framework",
+            "incubator",
+            "phalcon"
+        ]
+    },
+    {
+        "name": "factual/factual-php-driver",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Factual/factual-php-driver.git",
+            "reference": "a1b0227556f58de435132d230ff421d72222712b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Factual/factual-php-driver/zipball/a1b0227556f58de435132d230ff421d72222712b",
+            "reference": "a1b0227556f58de435132d230ff421d72222712b",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.1.2"
+        },
+        "time": "2015-12-02 18:22:34",
+        "type": "php-driver",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Factual": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache License 2.0"
+        ],
+        "authors": [
+            {
+                "name": "Tyler Bell",
+                "email": "tyler@factual.com"
+            }
+        ],
+        "description": "This is the official PHP driver for Factual's public API.",
+        "homepage": "http://developer.factual.com/display/docs/Factual+Developer+APIs+Version+3",
+        "keywords": [
+            "Factual"
+        ]
+    },
+    {
+        "name": "redound/phalcon-rest",
+        "version": "1.1.8",
+        "version_normalized": "1.1.8.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/redound/phalcon-rest.git",
+            "reference": "8f8717310b2cfd9dc3062cfbac213e51ead1e0ca"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/redound/phalcon-rest/zipball/8f8717310b2cfd9dc3062cfbac213e51ead1e0ca",
+            "reference": "8f8717310b2cfd9dc3062cfbac213e51ead1e0ca",
+            "shasum": ""
+        },
+        "require": {
+            "ext-phalcon": ">=1.3.2",
+            "php": ">=5.4"
+        },
+        "suggest": {
+            "firebase/php-jwt": "^3.0",
+            "league/fractal": "^0.13.0"
+        },
+        "time": "2015-12-16 09:31:01",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "PhalconRest\\": "src/PhalconRest"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "Olivier Andriessen",
+                "email": "olivierandriessen@gmail.com"
+            },
+            {
+                "name": "Bart Blok",
+                "email": "bart@wittig.nl"
+            }
+        ],
+        "description": "Phalcon REST Library"
+    },
+    {
+        "name": "psr/http-message",
+        "version": "1.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-fig/http-message.git",
+            "reference": "85d63699f0dbedb190bbd4b0d2b9dc707ea4c298"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-fig/http-message/zipball/85d63699f0dbedb190bbd4b0d2b9dc707ea4c298",
+            "reference": "85d63699f0dbedb190bbd4b0d2b9dc707ea4c298",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2015-05-04 20:22:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Psr\\Http\\Message\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }
+        ],
+        "description": "Common interface for HTTP messages",
+        "keywords": [
+            "http",
+            "http-message",
+            "psr",
+            "psr-7",
+            "request",
+            "response"
+        ]
+    },
+    {
+        "name": "zendframework/zend-diactoros",
+        "version": "1.3.5",
+        "version_normalized": "1.3.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/zendframework/zend-diactoros.git",
+            "reference": "b1d59735b672865dbeb930805029c24f226e3e77"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/b1d59735b672865dbeb930805029c24f226e3e77",
+            "reference": "b1d59735b672865dbeb930805029c24f226e3e77",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^5.4 || ^7.0",
+            "psr/http-message": "~1.0"
+        },
+        "provide": {
+            "psr/http-message-implementation": "~1.0.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.6",
+            "squizlabs/php_codesniffer": "^2.3.1"
+        },
+        "time": "2016-03-17 18:02:05",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.3-dev",
+                "dev-develop": "1.4-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Zend\\Diactoros\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-2-Clause"
+        ],
+        "description": "PSR HTTP Message implementations",
+        "homepage": "https://github.com/zendframework/zend-diactoros",
+        "keywords": [
+            "http",
+            "psr",
+            "psr-7"
+        ]
+    },
+    {
+        "name": "egeloen/http-adapter",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/egeloen/ivory-http-adapter.git",
+            "reference": "f8514a0f23228087ac00d06e9a71533edcdf185c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/egeloen/ivory-http-adapter/zipball/f8514a0f23228087ac00d06e9a71533edcdf185c",
+            "reference": "f8514a0f23228087ac00d06e9a71533edcdf185c",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.8",
+            "zendframework/zend-diactoros": "^1.1"
+        },
+        "require-dev": {
+            "cakephp/cakephp": "^3.0.3",
+            "doctrine/cache": "^1.4",
+            "ext-curl": "*",
+            "guzzle/guzzle": "^3.9.4@dev",
+            "guzzlehttp/guzzle": "^4.1.4|^5.0|^6.0",
+            "kriswallsmith/buzz": "^0.13",
+            "nategood/httpful": "^0.2.17",
+            "phpunit/phpunit": "^4.0",
+            "phpunit/phpunit-mock-objects": "dev-matcher-verify as 2.3.x-dev",
+            "psr/log": "^1.0",
+            "react/dns": "^0.4.1",
+            "react/http-client": "^0.4",
+            "rmccue/requests": "dev-master",
+            "satooshi/php-coveralls": "^0.6",
+            "symfony/event-dispatcher": "^2.0|^3.0",
+            "symfony/phpunit-bridge": "^2.7|^3.0",
+            "tedivm/stash": "^0.13",
+            "zendframework/zend-http": "^2.3.4",
+            "zendframework/zendframework1": ">=1.12.9,<=1.12.14|^1.12.16"
+        },
+        "suggest": {
+            "doctrine/cache": "Allows you to use the cache event subscriber",
+            "ext-curl": "Allows you to use the cURL adapter",
+            "ext-http": "Allows you to use the PECL adapter",
+            "guzzle/guzzle": "Allows you to use the Guzzle 3 adapter",
+            "guzzlehttp/guzzle": "Allows you to use the Guzzle 4 adapter",
+            "kriswallsmith/buzz": "Allows you to use the Buzz adapter",
+            "nategood/httpful": "Allows you to use the Httpful adapter",
+            "psr/log": "Allows you to use the logger event subscriber",
+            "rmccue/requests": "Allows you to use the Requests adapter",
+            "symfony/event-dispatcher": "Allows you to use the event lifecycle",
+            "symfony/stopwatch": "Allows you to use the stopwatch http adapter and event subscriber",
+            "tedivm/stash": "Allows you to use the cache event subscriber",
+            "zendframework/zend-http": "Allows you to use the Zend 2 adapter",
+            "zendframework/zendframework1": "Allows you to use the Zend 1 adapter"
+        },
+        "time": "2015-12-13 10:05:58",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Ivory\\HttpAdapter\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Eric GELOEN",
+                "email": "geloen.eric@gmail.com"
+            }
+        ],
+        "description": "Issue HTTP request for PHP 5.3+.",
+        "keywords": [
+            "http",
+            "http-adapter",
+            "http-client",
+            "psr-7"
+        ],
+        "abandoned": "php-http/httplug"
+    },
+    {
+        "name": "igorw/get-in",
+        "version": "v1.0.3",
+        "version_normalized": "1.0.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/igorw/get-in.git",
+            "reference": "170ded831f49abc6a6061f655aba9bdbcf7b8111"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/igorw/get-in/zipball/170ded831f49abc6a6061f655aba9bdbcf7b8111",
+            "reference": "170ded831f49abc6a6061f655aba9bdbcf7b8111",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4"
+        },
+        "time": "2014-12-15 23:03:51",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "src/get_in.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Igor Wiedler",
+                "email": "igor@wiedler.ch"
+            }
+        ],
+        "description": "Functions for for hash map (assoc array) traversal.",
+        "keywords": [
+            "assoc-array",
+            "hash-map"
+        ]
+    },
+    {
+        "name": "willdurand/geocoder",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/geocoder-php/Geocoder.git",
+            "reference": "772bb06ccd707bb7e89e79122fbf07bb6093fb18"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/geocoder-php/Geocoder/zipball/772bb06ccd707bb7e89e79122fbf07bb6093fb18",
+            "reference": "772bb06ccd707bb7e89e79122fbf07bb6093fb18",
+            "shasum": ""
+        },
+        "require": {
+            "egeloen/http-adapter": "~0.8|~1.0",
+            "igorw/get-in": "~1.0",
+            "php": "^5.4|^7.0"
+        },
+        "require-dev": {
+            "geoip2/geoip2": "~2.0",
+            "symfony/stopwatch": "~2.5"
+        },
+        "suggest": {
+            "ext-geoip": "Enabling the geoip extension allows you to use the MaxMindProvider.",
+            "geoip/geoip": "If you are going to use the MaxMindBinaryProvider (conflict with geoip extension).",
+            "geoip2/geoip2": "If you are going to use the GeoIP2DatabaseProvider.",
+            "symfony/stopwatch": "If you want to use the TimedGeocoder"
+        },
+        "time": "2016-03-06 14:24:23",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.3-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Geocoder": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "William Durand",
+                "email": "william.durand1@gmail.com"
+            }
+        ],
+        "description": "The almost missing Geocoder PHP 5.4 library.",
+        "homepage": "http://geocoder-php.org",
+        "keywords": [
+            "abstraction",
+            "geocoder",
+            "geocoding",
+            "geoip"
+        ]
     }
 ]

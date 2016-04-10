@@ -2,11 +2,12 @@
     "description": "Places API",
     "version": "1.0.0",
     "require": {
-        "redound/phalcon-rest": "^1.1.8",
-        "league/fractal": "^0.13.0",
-        "firebase/php-jwt": "^3.0",
-        "phpunit/phpunit": "~4.5",
-        "phalcon/incubator": "dev-master"
+        "redound/phalcon-rest": "1.1.8",
+        "league/fractal": "0.13.0",
+        "firebase/php-jwt": "3.0",
+        "phalcon/incubator": "dev-master",
+        "Factual/factual-php-driver": "dev-master",
+        "willdurand/geocoder": "dev-master"
     },
     "authors": [
         {
